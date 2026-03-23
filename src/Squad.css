@@ -1,0 +1,98 @@
+.Squad-banner {
+  background-image: url('./assets/squad.png');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  animation: bannerSlideIn 1.2s ease-out forwards;
+}
+
+.Squad-main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(255, 218, 5);
+  color: rgb(14, 9, 83);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-container {
+  background-image: url('./assets/background.png');
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-section {
+  border: 6px solid rgb(14, 9, 83);
+  background-color: rgb(14, 9, 83);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  position: relative;
+}
+
+.card-section:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.card-section h1 {
+  text-align: center;
+  margin-top: 15px;
+  color: rgb(255, 218, 5);
+}
+
+.card-section img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -80px;
+  border: 4px solid rgb(255, 218, 5);
+  background: white;
+  float: none;
+}
+
+.card-content-left {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.card-content-left h4 {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card-content-left h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-content-left:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .Squad-banner {
+    height: 40vh;
+  }
+
+  .card-section {
+    max-width: 100%;
+  }
+
+  .card-section img {
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+  }
+}

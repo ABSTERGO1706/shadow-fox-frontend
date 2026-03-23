@@ -1,0 +1,158 @@
+.Achievements-main {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(255, 218, 5);
+  color: rgb(14, 9, 83);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card-container-left,
+.card-container-right {
+  border: 8px solid rgb(14, 9, 83);
+  background-color: rgb(14, 9, 83);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-container-right {
+  flex-direction: row-reverse;
+}
+
+.card-container-left:hover,
+.card-container-right:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-container-left h2,
+.card-container-right h2 {
+  font-size: 28px;
+}
+
+.player_ach_container {
+  flex: 1;
+  min-width: 300px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.player_ach_container h4 {
+  font-size: 20px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.player_ach_container p {
+  font-size: 17px;
+}
+
+.card-container-left:hover h4,
+.card-container-right:hover h4 {
+  color: #ffd700;
+}
+
+.player_ach_img {
+  width: 100%;
+  max-width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card-container-left:hover .player_ach_img,
+.card-container-right:hover .player_ach_img {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.Achievements-banner {
+  background-image: url("./assets/achievements.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+   animation: bannerSlideIn 1.2s ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .Achievements-banner {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .Achievements-banner {
+    height: 50vh;
+  }
+}
+
+.Achievements-content-left,
+.Achievements-content-right {
+  background-image: url('./assets/background.png');
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .card-container-left,
+  .card-container-right {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .player_ach_img {
+    max-width: 180px;
+    height: 180px;
+  }
+
+  .card-container-left h2,
+  .card-container-right h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Achievements-main {
+    padding: 10px;
+  }
+
+  .card-container-left,
+  .card-container-right {
+    padding: 25px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .player_ach_img {
+    max-width: 140px;
+    height: 140px;
+  }
+
+  .card-container-left h2,
+  .card-container-right h2 {
+    font-size: 22px;
+  }
+
+  .player_ach_container {
+    font-size: 16px;
+  }
+}
