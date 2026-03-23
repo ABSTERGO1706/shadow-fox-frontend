@@ -7,7 +7,7 @@ function Timeline() {
   const [data, useData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/Timeline")
+    fetch("https://shadow-fox-production.up.railway.app/Timeline")
       .then(res => {
         if (!res.ok) throw new Error('Fetch Failed');
         return res.json();
@@ -30,7 +30,7 @@ function Timeline() {
                 className={`Timeline-block-container ${index % 2 === 0 ? 'left' : 'right'}`}
               >
                 <div className="timeline-card">
-                    <img src={`http://localhost:8080/images/${item.imageUrl}`} alt={item.title} className="timeline-image"/>
+                    <img src={`https://shadow-fox-production.up.railway.app/images/${item.imageUrl}`} alt={item.title} className="timeline-image"/>
                   <h1 className="year">{item.year}</h1>
                   <h1 className="title">{item.title}</h1>
                   <p className="desc">{item.description}</p>
