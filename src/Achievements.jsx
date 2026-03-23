@@ -8,7 +8,7 @@ import RJ from './assets/Ravindra Jadeja.jpg';
 function Achievements()
 {
     const[data,useData]=useState([]);
-    useEffect(()=>{fetch("http://localhost:8080/Achievements")
+    useEffect(()=>{fetch("https://shadow-fox-production.up.railway.app/Achievements")
         .then(res=>{
             if(!res.ok) throw new Error('Fetch Failed');
             return res.json();
